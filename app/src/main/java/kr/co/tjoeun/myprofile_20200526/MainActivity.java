@@ -3,9 +3,12 @@ package kr.co.tjoeun.myprofile_20200526;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.bumptech.glide.Glide;
+import com.github.chrisbanes.photoview.PhotoView;
 
 import kr.co.tjoeun.myprofile_20200526.databinding.ActivityMainBinding;
 
@@ -24,6 +27,13 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvent() {
 
+        binding.profileImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(mContext, PhotoViewActivity.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
     @Override
