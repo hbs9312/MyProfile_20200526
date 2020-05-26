@@ -31,6 +31,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(mContext, PhotoViewActivity.class);
+                myIntent.putExtra("imgUrl", "https://img.insight.co.kr/static/2020/01/11/700/3x9v0a9je60h5r971fm4.jpg");
                 startActivity(myIntent);
             }
         });
